@@ -35,6 +35,13 @@ class TestRepo < Test::Unit::TestCase
 
   # heads
 
+  def test_current_head
+    head=@r.head
+    assert_equal Grit::Head, head.class
+    assert_equal 'master', head.name
+    assert_equal 'e1ba1e3ca83d53a2f16b39c453fad33380f8d1cc', @r.commits(head.name).first.id
+  end
+
   def test_heads_should_return_array_of_head_objects
     @r.heads.each do |head|
       assert_equal Grit::Head, head.class
