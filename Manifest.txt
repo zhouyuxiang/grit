@@ -30,6 +30,7 @@ lib/grit/status.rb
 lib/grit/tag.rb
 lib/grit/tree.rb
 lib/grit.rb
+lib/open3_detach.rb
 test/fixtures/blame
 test/fixtures/cat_file_blob
 test/fixtures/cat_file_blob_size
